@@ -1,0 +1,681 @@
+/* ========================================= */
+/* --- ESTILOS PARA LA PÁGINA DE INDEX--- */
+/* ========================================= */
+
+
+/* --- Variables Globales --- */
+:root {
+    --bg-main: #051a35;
+    --bg-card: #0c2545;   
+    --bg-card-hover: #13335c;
+    --accent-light: #6d9cbf; 
+    --text-light: #afc7d0;
+    --text-white: #ffffff;
+    --font-heading: 'Cinzel', serif;
+    --font-body: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* --- Reseteo y Estilos Generales --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.contenedor-index {
+    background-color: var(--bg-main);
+    font-family: var(--font-body);
+    color: var(--text-white);
+    overflow-x: hidden;
+}
+
+/* --- Header --- */
+.header {
+    background-color: rgba(5, 26, 53, 0.95);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(109, 156, 191, 0.15);
+}
+
+.logo img {
+    height: 45px;
+    width: auto;
+    display: block;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--accent-light);
+}
+
+/* --- Portada --- */
+.portada {
+    position: relative;
+    width: 100%;
+    height: 75vh;
+    min-height: 450px;
+    overflow: hidden;
+}
+
+.portada img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.portada-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(5,26,53,0.4), rgba(5,26,53,0.8));
+    z-index: 1;
+}
+
+.texto-portada {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: var(--text-white);
+    width: 90%;
+    max-width: 900px;
+    z-index: 2;
+}
+
+.texto-portada h1 {
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.6); 
+}
+
+.texto-portada p {
+    font-size: 1.25rem;
+    color: var(--text-light);
+    font-weight: 300;
+    font-style: italic;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+}
+
+/* --- Sección de Servicios --- */
+.services-section {
+    padding: 6rem 5%;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.section-header {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 4rem auto;
+}
+
+.section-header h2 {
+    font-size: 0.85rem;
+    letter-spacing: 4px;
+    color: var(--accent-light);
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.section-header h1 {
+    font-family: var(--font-heading);
+    font-size: 2.6rem;
+    color: var(--text-white);
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.section-header p {
+    color: var(--text-light);
+    font-size: 1.05rem;
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+/* --- Grid de Cuadros --- */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.service-card {
+    background-color: var(--bg-card);
+    border: 1px solid rgba(109, 156, 191, 0.15);
+    border-radius: 12px;
+    padding: 2.5rem 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    background-color: var(--bg-card-hover);
+    transform: translateY(-8px);
+    border-color: var(--accent-light);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+.service-card h3 {
+    font-family: var(--font-heading);
+    font-size: 1.35rem;
+    color: var(--text-white);
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.service-card p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: var(--text-light);
+    font-weight: 300;
+}
+
+/* --- Ajuste de imágenes en las tarjetas --- */
+.service-card img {
+    width: 100%;
+    max-height: 280px;
+    object-fit: contain;
+    border-radius: 8px;
+    margin-top: 1.5rem;
+    display: block;
+    background-color: rgba(5, 26, 53, 0.3);
+}
+
+/* --- Footer --- */
+.footer {
+    background-color: #031021;
+    border-top: 1px solid rgba(109, 156, 191, 0.15);
+    padding: 4rem 5% 2rem 5%;
+    color: var(--text-light);
+}
+
+.footer-content {
+    max-width: 1300px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+    margin-bottom: 3rem;
+}
+
+.footer-col h3, .footer-col h4 {
+    font-family: var(--font-heading);
+    color: var(--text-white);
+    margin-bottom: 1rem;
+}
+
+.footer-col h3 {
+    font-size: 1.4rem;
+}
+
+.footer-col h4 {
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+}
+
+.footer-col p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+    font-weight: 300;
+}
+
+.footer-col ul {
+    list-style: none;
+}
+
+.footer-col ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-col ul li a {
+    color: var(--text-light);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+    color: var(--accent-light);
+}
+
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid rgba(109, 156, 191, 0.1);
+    padding-top: 1.5rem;
+    font-size: 0.85rem;
+    font-weight: 300;
+}
+
+/* --- Responsivo para pantallas pequeñas --- */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .nav-links {
+        gap: 1.25rem;
+    }
+
+    .texto-portada h1 {
+        font-size: 2.1rem;
+    }
+
+    .texto-portada p {
+        font-size: 1rem;
+    }
+
+    .section-header h1 {
+        font-size: 2.1rem;
+    }
+    
+    .portada {
+        height: 60vh;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ========================================= */
+/* --- ESTILOS PARA LA PÁGINA DE CATÁLOGO --- */
+/* ========================================= */
+
+.contenedor-catalogo {
+    background-color: var(--bg-main);
+    font-family: var(--font-body);
+    color: var(--text-white);
+    overflow-x: hidden;
+}
+
+.catalog-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 5rem 5%;
+}
+
+.catalog-header {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 4rem auto;
+}
+
+.catalog-header .subtitle {
+    font-size: 0.85rem;
+    letter-spacing: 4px;
+    color: var(--accent-light);
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.catalog-header .title {
+    font-family: var(--font-heading);
+    font-size: 2.6rem;
+    color: var(--text-white);
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.catalog-header .underline {
+    width: 60px;
+    height: 2px;
+    background-color: var(--accent-light);
+    margin: 0 auto;
+}
+
+.catalog-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(300px, 450px));
+    justify-content: center;
+    gap: 2.5rem;
+}
+
+.catalog-item {
+    background-color: var(--bg-card);
+    border: 1px solid rgba(109, 156, 191, 0.15);
+    border-radius: 12px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.catalog-item:hover {
+    background-color: var(--bg-card-hover);
+    transform: translateY(-8px);
+    border-color: var(--accent-light);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+.image-wrapper {
+    width: 100%;
+    height: 240px; 
+    overflow: hidden;
+    margin-bottom: 1.25rem;
+    border-radius: 8px;
+}
+
+.image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.catalog-item:hover .image-wrapper img {
+    transform: scale(1.08);
+}
+
+.item-title {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    color: var(--text-white);
+    font-weight: 600;
+    margin-top: 0.5rem;
+}
+
+
+/* ========================================= */
+/* --- ESTILOS PÁGINA NOSOTROS --- */
+/* ========================================= */
+
+.contenedor-nosotros {
+    background-color: var(--bg-main);
+    font-family: var(--font-body);
+    color: var(--text-white);
+    overflow-x: hidden;
+}
+
+/* --- Portada (FOTO DE LOS NOVIOS) --- */
+.contenedor-nosotros .portada {
+    min-height: 520px;
+    display: flex;
+    align-items: center;
+    padding: 60px 8%;
+    position: relative;
+    background-image: 
+        linear-gradient(
+            90deg,
+            rgba(5, 26, 53, 0.95) 0%,
+            rgba(5, 26, 53, 0.8) 40%,
+            rgba(5, 26, 53, 0.1) 75%
+        ),
+        url("img/FOTO DE LOS NOVIOS.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-bottom: 1px solid rgba(109, 156, 191, 0.15);
+}
+
+.contenedor-nosotros .contenido {
+    position: relative;
+    z-index: 2;
+    max-width: 550px;
+    color: var(--text-white);
+}
+
+.contenedor-nosotros .contenido h1 {
+    font-family: var(--font-heading);
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    color: var(--text-white);
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.contenedor-nosotros .contenido p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-light);
+    font-weight: 300;
+}
+
+/* --- Sección Servicios (FONDO DE LA CÁMARA) --- */
+.contenedor-nosotros .servicios {
+    min-height: 480px;
+    display: flex;
+    align-items: center;
+    padding: 60px 8%;
+    position: relative;
+    background-image: 
+        linear-gradient(
+            90deg,
+            rgba(5, 26, 53, 0.95) 0%,
+            rgba(5, 26, 53, 0.8) 40%,
+            rgba(5, 26, 53, 0.1) 75%
+        ),
+        url("img/FONDO DE LA CÁMARA.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-bottom: 1px solid rgba(109, 156, 191, 0.15);
+}
+
+.contenedor-nosotros .texto-servicios {
+    position: relative;
+    z-index: 2;
+    max-width: 500px;
+    color: var(--text-white);
+}
+
+.contenedor-nosotros .texto-servicios h2 {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: var(--text-white);
+    font-weight: 600;
+}
+
+.contenedor-nosotros .texto-servicios p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-light);
+    font-weight: 300;
+}
+
+/* --- Sección Inferior "Sobre nosotros" --- */
+.contenedor-nosotros .nosotros {
+    padding: 80px 10%;
+    text-align: center;
+    background-color: var(--bg-card);
+    border-top: 1px solid rgba(109, 156, 191, 0.15);
+}
+
+.contenedor-nosotros .nosotros h2 {
+    font-family: var(--font-heading);
+    font-size: 2.3rem;
+    margin-bottom: 20px;
+    color: var(--text-white);
+}
+
+.contenedor-nosotros .nosotros p {
+    max-width: 750px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-light);
+    font-weight: 300;
+}
+
+/* --- Responsivo para dispositivos móviles --- */
+@media (max-width: 700px) {
+    .contenedor-nosotros .contenido h1 {
+        font-size: 2.1rem;
+    }
+
+    .contenedor-nosotros .texto-servicios h2 {
+        font-size: 2rem;
+    }
+
+    .contenedor-nosotros .portada,
+    .contenedor-nosotros .servicios {
+        padding: 40px 5%;
+        min-height: 400px;
+        background-position: center;
+    }
+}
+
+
+/* ========================================= */
+/* --- ESTILOS PARA LA PÁGINA DE CONTACTO --- */
+/* ========================================= */
+
+.contenedor-contacto {
+    background-color: var(--bg-main);
+    font-family: var(--font-body);
+    color: var(--text-white);
+    overflow-x: hidden;
+}
+
+.contenedor-principal {
+    max-width: 1200px;
+    margin: 5rem auto;
+    padding: 0 5%;
+}
+
+.tarjeta {
+    background-color: var(--bg-card);
+    border: 1px solid rgba(109, 156, 191, 0.15);
+    border-radius: 16px;
+    padding: 3.5rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+.seccion-texto {
+    flex: 1;
+}
+
+.seccion-texto h1 {
+    font-family: var(--font-heading);
+    font-size: 2.4rem;
+    color: var(--text-white);
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.seccion-texto p {
+    color: var(--text-light);
+    font-size: 1rem;
+    line-height: 1.7;
+    font-weight: 300;
+}
+
+.formulario {
+    flex: 1.2;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.grupo-input {
+    display: flex;
+    flex-direction: column;
+}
+
+.grupo-input label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--accent-light);
+    margin-bottom: 6px;
+    letter-spacing: 0.5px;
+}
+
+.grupo-input input,
+.grupo-input textarea {
+    padding: 12px;
+    border: 1px solid rgba(109, 156, 191, 0.2);
+    border-radius: 8px;
+    font-size: 0.95rem;
+    outline: none;
+    background-color: rgba(5, 26, 53, 0.6);
+    color: var(--text-white);
+    font-family: var(--font-body);
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.grupo-input input:focus,
+.grupo-input textarea:focus {
+    border-color: var(--accent-light);
+    background-color: rgba(5, 26, 53, 0.9);
+}
+
+.grupo-input input::placeholder,
+.grupo-input textarea::placeholder {
+    color: rgba(175, 199, 208, 0.4);
+}
+
+.grupo-input input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(0.8);
+    cursor: pointer;
+}
+
+.boton-enviar {
+    background-color: var(--accent-light);
+    color: var(--bg-main);
+    border: none;
+    padding: 14px;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: 600;
+    font-family: var(--font-body);
+    margin-top: 10px;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.boton-enviar:hover {
+    background-color: var(--text-white);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(109, 156, 191, 0.3);
+}
+
+@media (max-width: 850px) {
+    .tarjeta {
+        flex-direction: column;
+        padding: 2rem 1.5rem;
+    }
+}
+
+/* Estilo para el mapa de Google Maps */
+.seccion-texto iframe {
+    filter: invert(90%) hue-rotate(180deg) contrast(110%);
+    border-radius: 8px;
+    margin-top: 1rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
